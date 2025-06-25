@@ -1,0 +1,67 @@
+<table class="body-wrap"
+       style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; width: 100%; background-color: #f6f6f6;"
+       xmlns:th="http://www.w3.org/1999/xhtml">
+    <tbody>
+    <tr>
+        <td></td>
+        <td class="container" width="600" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; display: block !important; max-width: 600px !important; margin: 0 auto;">
+            <div class="content" style="font-family: 'Roboto', sans-serif; box-sizing: border-box; max-width: 600px; margin: 0 auto; padding: 20px;">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Roboto', sans-serif; box-sizing: border-box; border-radius: 3px; background-color: #FFFF; border: 1px solid #e9e9e9; ;">
+                    <tbody>
+                    <tr>
+                        <td class="" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #6771CA; padding: 20px;">
+                            <a th:href="${url}" style="font-size: 48px; color: #fff; text-decoration: none;letter-spacing: 1.2px;"> Template Jorge Leves</a> <br>
+                            <span style="margin-top: 5px; display: block;">Por favor verifique su correo electrónico</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-wrap" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; margin: 0; padding: 20px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Roboto', sans-serif; box-sizing: border-box;">
+                                <tbody>
+                                <tr>
+                                    <td class="content-block" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; margin: 0; padding: 0 0 20px; font-size: 32px; font-weight: 550;">
+                                        Hola <strong style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; font-size: 32px; margin: 0; font-weight: 550;" th:text="${name}"></strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; margin: 0; padding: 0 0 20px; font-size: 17px; font-weight: 400;">
+                                        <p>Soy una prueba de un template de email</p>
+                                        <p>Has sido seleccionada para probar este template de Jorge Leves</p>
+                                        <p>Solo debes hacer clic en el siguiente link para poder comenzar a utilizar nuestra plataforma  </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; margin: 0; padding: 0 0 20px;">
+                                        <img src="cid:image" style="width: 300px; display: block; margin-bottom: 35px;">
+                                        <a class="btn-primary" style="font-size: 18px; color: #fff; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 7.5px; text-transform: capitalize; background-color: #6771CA; margin: 0; border-color: #6771CA; border-style: solid; border-width: 7px 12px;"  th:href="${url}">Verificar mi cuenta</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; margin: 0; padding: 0 0 20px;">
+                                        Gracias por elegir nuestra empresa.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="footer" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;">
+                    <table width="100%" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box;">
+                        <tbody>
+                        <tr>
+                            <td class="aligncenter content-block" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; box-sizing: border-box; color: #999; text-align: center; margin: 0; padding: 0 0 20px;">
+                                <a href="#" style="font-size: 16px; color: #999; text-decoration: underline;">Unsubscribe</a>
+                                from these alerts.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+[2025-06-25 16:19:27] [ INFO ] [AuthController:46] Usuario intentado acceder: superadmin@toolshouse.com
+[2025-06-25 16:20:01] [ INFO ] [AuthController:46] Usuario intentado acceder: superadmin
+[2025-06-25 16:20:15] [ INFO ] [AuthController:46] Usuario intentado acceder: superadmin
+[2025-06-25 16:20:15] [ INFO ] [AuthService:56] Usuario autenticado con exito
+[2025-06-25 16:21:49] [ INFO ] [AuthController:46] Usuario intentado acceder: admin
+[2025-06-25 16:21:49] [ INFO ] [AuthService:56] Usuario autenticado con exito
+[2025-06-25 16:21:57] [ INFO ] [AuthController:46] Usuario intentado acceder: admin
+[2025-06-25 16:21:57] [ INFO ] [AuthService:56] Usuario autenticado con exito
+[2025-06-25 16:23:59] [ INFO ] [AuthController:46] Usuario intentado acceder: admin
+[2025-06-25 16:24:00] [ INFO ] [AuthService:56] Usuario autenticado con exito
+[2025-06-25 16:27:03] [ INFO ] [AuthController:46] Usuario intentado acceder: admin
+[2025-06-25 16:27:03] [ INFO ] [AuthService:56] Usuario autenticado con exito
+[2025-06-25 16:27:03] [ INFO ] [AuthService:77] Creacion de token y refresh token ok
+[2025-06-25 16:32:52] [ INFO ] [AuthController:54] Nuevo registro: RegisterRequest(username=JorgeLeves, password=12345678, email=jlinformatic91@gmail.com)
+[2025-06-25 16:32:52] [ INFO ] [UserServiceImpl:31] Inicio de registro de usuario
+[2025-06-25 16:32:52] [ INFO ] [UserServiceImpl:41] Registro exitoso
+[2025-06-25 16:33:05] [ INFO ] [UserServiceImpl:48] Envio de email
+[2025-06-25 16:33:05] [ INFO ] [AuthService:117] Usuario registrado y guardado en base de datos
+[2025-06-25 16:33:05] [ INFO ] [AuthService:128] Generacion de token y refresh token ok
+[2025-06-25 16:34:32] [ INFO ] [AuthController:54] Nuevo registro: RegisterRequest(username=JorgeLeves, password=12345678, email=jlinformatic91@gmail.com)
+[2025-06-25 16:34:33] [ INFO ] [UserServiceImpl:31] Inicio de registro de usuario
+[2025-06-25 16:34:33] [ INFO ] [UserServiceImpl:41] Registro exitoso
+[2025-06-25 16:34:33] [ INFO ] [UserServiceImpl:48] Envio de email
+[2025-06-25 16:34:33] [ INFO ] [AuthService:117] Usuario registrado y guardado en base de datos
+[2025-06-25 16:34:33] [ INFO ] [AuthService:128] Generacion de token y refresh token ok
+[2025-06-25 16:38:57] [ INFO ] [AuthController:55] Nuevo registro: RegisterRequest(username=JorgeLeves, password=12345678, email=jlinformatic91@gmail.com)
+[2025-06-25 16:38:58] [ INFO ] [UserServiceImpl:31] Inicio de registro de usuario
+[2025-06-25 16:38:58] [ INFO ] [UserServiceImpl:41] Registro exitoso
+[2025-06-25 16:38:58] [ INFO ] [UserServiceImpl:48] Envio de email
+[2025-06-25 16:38:58] [ INFO ] [AuthService:117] Usuario registrado y guardado en base de datos
+[2025-06-25 16:38:58] [ INFO ] [AuthService:128] Generacion de token y refresh token ok
+[2025-06-25 16:44:23] [ INFO ] [AuthController:55] Nuevo registro: RegisterRequest(username=JorgeLeves, password=12345678, email=jlinformatic91@gmail.com)
+[2025-06-25 16:44:23] [ INFO ] [UserServiceImpl:31] Inicio de registro de usuario
+[2025-06-25 16:44:23] [ INFO ] [UserServiceImpl:41] Registro exitoso
+[2025-06-25 16:44:23] [ INFO ] [UserServiceImpl:48] Envio de email
+[2025-06-25 16:44:23] [ INFO ] [AuthService:117] Usuario registrado y guardado en base de datos
+[2025-06-25 16:44:24] [ INFO ] [AuthService:128] Generacion de token y refresh token ok
+[2025-06-25 16:47:35] [ INFO ] [AuthController:55] Nuevo registro: RegisterRequest(username=JorgeLeves, password=12345678, email=jlinformatic91@gmail.com)
+[2025-06-25 16:47:35] [ INFO ] [UserServiceImpl:31] Inicio de registro de usuario
+[2025-06-25 16:47:35] [ INFO ] [UserServiceImpl:41] Registro exitoso
+[2025-06-25 16:47:35] [ INFO ] [UserServiceImpl:48] Envio de email
+[2025-06-25 16:47:35] [ INFO ] [AuthService:117] Usuario registrado y guardado en base de datos
+[2025-06-25 16:47:36] [ INFO ] [AuthService:128] Generacion de token y refresh token ok
+[2025-06-25 16:47:55] [ INFO ] [UserServiceImpl:54] Inicio Confirmacion
+[2025-06-25 16:47:55] [ INFO ] [UserServiceImpl:58] Enabled User true
+[2025-06-25 16:47:55] [ INFO ] [UserServiceImpl:62] Verification email ok
+[2025-06-25 16:47:55] [ DEBUG] [cache:45] Couldn't find template in cache for "Confirmacion.ftlh"("es_ES", UTF-8, parsed); will try to load it.
+[2025-06-25 16:47:55] [ DEBUG] [cache:45] TemplateLoader.findTemplateSource("Confirmacion_es_ES.ftlh"): Not found
+[2025-06-25 16:47:55] [ DEBUG] [cache:45] TemplateLoader.findTemplateSource("Confirmacion_es.ftlh"): Not found
+[2025-06-25 16:47:55] [ DEBUG] [cache:45] TemplateLoader.findTemplateSource("Confirmacion.ftlh"): Not found

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de cuenta</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 200vh;
+
+        }
+
+        .content {
+            max-width: 600px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 1px solid #e9e9e9;
+
+        }
+
+        .header {
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 3px 3px 0 0;
+            background-color: #6771CA;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .content-wrap {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .content-block {
+            margin: 0;
+            padding: 0 0 20px;
+        }
+
+        .footer {
+            width: 100%;
+            clear: both;
+            color: #999;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .aligncenter {
+            text-align: center;
+        }
+
+        .btn-primary {
+            color: #FFF;
+            text-decoration: none;
+            line-height: 2em;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 5px;
+            text-transform: capitalize;
+            background-color: #6771CA;
+            margin: 0;
+            border-color: #6771CA;
+            border-style: solid;
+            border-width: 8px 16px;
+        }
+
+        a {
+            color: #999;
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+<table class="body-wrap">
+    <tr>
+        <td></td>
+        <td class="container">
+            <div class="content">
+                <table class="main" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="header"  align-text = "center" valign="top">
+                            <h1>Confirmación de cuenta</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-wrap">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="content-block">
+                                        <p>Estado de la verificación: <span th:text="${verificar}"></span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <p>Marca de tiempo: <span th:text="${timeStamp}"></span></p>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>
