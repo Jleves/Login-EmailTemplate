@@ -11,4 +11,17 @@ public class EmailUtils {
     public static String getVerificationUrl(String host, String token) {
         return host + "/auth/check?token=" + token;
     }
+
+    public static String getPasswordResetMessage(String name, String host, String token) {
+        return "Hola " + name + ",\n\n" +
+                "Recibimos una solicitud para restablecer tu contraseña. Hacé clic en el siguiente enlace para crear una nueva:\n\n" +
+                getPasswordResetUrl(host, token) + "\n\n" +
+                "Si no hiciste esta solicitud, simplemente ignorá este correo.\n\n" +
+                "– El equipo de soporte.";
+    }
+
+    public static String getPasswordResetUrl(String host, String token) {
+        return host + "/auth/reset-password?token=" + token;
+    }
+
 }

@@ -1,7 +1,7 @@
 package com.Login.Email.Security;
 
 
-import com.Login.Email.Service.Email.Impl.UserServiceImpl;
+import com.Login.Email.Service.Impl.UserServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

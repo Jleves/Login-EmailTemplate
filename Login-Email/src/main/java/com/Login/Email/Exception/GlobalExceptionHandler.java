@@ -5,6 +5,7 @@ import com.Login.Email.Exception.DTO.ErrorResponse;
 import com.Login.Email.Exception.JWT.CustomExpiredJwtException;
 import com.Login.Email.Exception.JWT.CustomInvalidJwtException;
 import com.Login.Email.Exception.JWT.InvalidCredentialsException;
+import com.Login.Email.Exception.JWT.InvalidTokenException;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
@@ -113,5 +114,17 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errorResponse,HttpStatus.INTERNAL_SERVER_ERROR) ;
 
 
+    }
+
+
+    @ExceptionHandler(InvalidTokenException.class)
+    public ResponseEntity<ErrorResponse> handleInvalidTokenException(InvalidTokenException ex, HttpServletRequest request) {
+        ErrorResponse errorResponse = new ErrorResponse(
+                LocalDate.now(),
+                HttpStatus.BAD_REQUEST,
+                ex.getMessage(),
+                request.getRequestURI()
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 }

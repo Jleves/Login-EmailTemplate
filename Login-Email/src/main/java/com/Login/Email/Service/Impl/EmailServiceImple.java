@@ -1,4 +1,4 @@
-package com.Login.Email.Service.Email.Impl;
+package com.Login.Email.Service.Impl;
 
 
 import com.Login.Email.Service.Email.EmailService;
@@ -24,8 +24,7 @@ import org.thymeleaf.context.Context;
 import java.io.File;
 import java.util.Map;
 
-import static com.Login.Email.Utils.EmailUtils.getEmailMessage;
-import static com.Login.Email.Utils.EmailUtils.getVerificationUrl;
+import static com.Login.Email.Utils.EmailUtils.*;
 
 
 @Service
@@ -35,7 +34,7 @@ public class EmailServiceImple implements EmailService {
     public static final String UTF_8_ENCODING = "UTF-8";
     public static final String EMAIL_TEMPLATE = "emailtemplate";
     public static final String TEXT_HTML_ENCONDING = "text/html";
-
+    public static final String RESTABLECER_CONTRASEÑA = "Restablecer contraseña";
 
 
     private final JavaMailSender emailSender;
@@ -176,6 +175,27 @@ public class EmailServiceImple implements EmailService {
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
             throw new RuntimeException(exception.getMessage());
+        }
+    }
+
+
+    @Async
+    public void sendPasswordResetEmail(String name, String to, String token) {
+        try {
+            Context context = new Context();
+            context.setVariables(Map.of("name", name, "url",  getPasswordResetUrl(host, token)));
+            String html = templateEngine.process("password-reset-template", context); // Nuevo template
+            MimeMessage message = getMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
+            helper.setPriority(1);
+            helper.setSubject(RESTABLECER_CONTRASEÑA);
+            helper.setFrom(fromEmail);
+            helper.setTo(to);
+            helper.setText(html, true);
+            emailSender.send(message);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException("Error al enviar email: " + e.getMessage());
         }
     }
 

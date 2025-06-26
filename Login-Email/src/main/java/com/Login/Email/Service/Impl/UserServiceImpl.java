@@ -1,4 +1,4 @@
-package com.Login.Email.Service.Email.Impl;
+package com.Login.Email.Service.Impl;
 
 
 import com.Login.Email.Model.Email.Confirmation;
@@ -7,7 +7,7 @@ import com.Login.Email.Model.User;
 import com.Login.Email.Repository.Email.ConfirmationRepository;
 import com.Login.Email.Repository.UserRepository;
 import com.Login.Email.Service.Email.EmailService;
-import com.Login.Email.Service.Email.UserService;
+import com.Login.Email.Service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.Logger;
 import org.springframework.security.core.userdetails.UserDetails;

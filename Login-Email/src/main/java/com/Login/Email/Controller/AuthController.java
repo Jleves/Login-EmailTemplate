@@ -1,6 +1,8 @@
 package com.Login.Email.Controller;
 
 
+import com.Login.Email.Dto.ForgotPasswordRequest;
+import com.Login.Email.Dto.ResetPasswordRequest;
 import com.Login.Email.Exception.ResourceNotFoundException;
 import com.Login.Email.Model.Auth.*;
 import com.Login.Email.Model.User;
@@ -8,8 +10,8 @@ import com.Login.Email.Security.JWTUtil;
 import com.Login.Email.Service.Auth.AuthService;
 import com.Login.Email.Service.Auth.RefreshTokenService;
 
-import com.Login.Email.Service.Email.Impl.UserServiceImpl;
-import com.Login.Email.Service.Email.UserService;
+import com.Login.Email.Service.Impl.PasswordResetServiceImpl;
+import com.Login.Email.Service.Impl.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.Logger;
@@ -28,16 +30,18 @@ public class AuthController {
     private final AuthService authService;
     private final UserServiceImpl userService;
     private final JWTUtil jwtUtil;
+    private final PasswordResetServiceImpl passwordResetService;
 
     private static final Logger logger = Logger.getLogger(AuthController.class);
 
     private RefreshTokenService refreshTokenService;
 @Autowired
-    public AuthController(AuthService authService, UserServiceImpl userService, JWTUtil jwtUtil, RefreshTokenService refreshTokenService) {
+    public AuthController(AuthService authService, UserServiceImpl userService, JWTUtil jwtUtil, PasswordResetServiceImpl passwordResetService, RefreshTokenService refreshTokenService) {
         this.authService = authService;
         this.userService = userService;
         this.jwtUtil = jwtUtil;
-        this.refreshTokenService = refreshTokenService;
+    this.passwordResetService = passwordResetService;
+    this.refreshTokenService = refreshTokenService;
     }
 
     @PostMapping("/login")
@@ -91,6 +95,41 @@ public class AuthController {
 
         return modelAndView;
     }
+
+
+
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+        logger.info("ForgotPassword create Token.");
+    passwordResetService.createPasswordResetToken(request.getEmail());
+        return ResponseEntity.ok("Si el correo existe, recibirás instrucciones.");
+    }
+
+    @GetMapping("/reset-password")
+    public ResponseEntity<String> validateToken(@RequestParam String token) {
+    logger.info("validation token");
+       passwordResetService.validateToken(token);
+        return ResponseEntity.ok("Token válido. Mostrar formulario de cambio.");
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<String> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+
+       logger.info("init reset passowrd");
+        passwordResetService.resetPassword(
+                request.getToken(),
+                request.getNewPassword()
+        );
+        return ResponseEntity.ok("Contraseña actualizada con éxito.");
+    }
+
+
+
+
+
+
+
 
 
     @GetMapping("/invitado")

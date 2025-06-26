@@ -3,7 +3,7 @@ package com.Login.Email.tests;
 
 import com.Login.Email.Controller.AuthController;
 import com.Login.Email.Model.User;
-import com.Login.Email.Service.Email.Impl.UserServiceImpl;
+import com.Login.Email.Service.Impl.UserServiceImpl;
 import com.Login.Email.reports.ExtentFactory;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

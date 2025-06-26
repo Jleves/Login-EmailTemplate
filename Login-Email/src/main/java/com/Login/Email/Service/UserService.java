@@ -1,4 +1,4 @@
-package com.Login.Email.Service.Email;
+package com.Login.Email.Service;
 
 
 import com.Login.Email.Model.User;

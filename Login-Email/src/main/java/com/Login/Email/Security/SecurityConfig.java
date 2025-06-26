@@ -1,7 +1,7 @@
 package com.Login.Email.Security;
 
 
-import com.Login.Email.Service.Email.Impl.UserServiceImpl;
+import com.Login.Email.Service.Impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
