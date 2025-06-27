@@ -82,6 +82,9 @@ public class SecurityConfig  {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()
                         .requestMatchers(HttpMethod.GET,"/auth/check").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/auth/forgot-password").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/auth/reset-password").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/auth/reset-password").permitAll()
                         .requestMatchers(HttpMethod.POST,"/auth/register").permitAll()
                         .requestMatchers(HttpMethod.GET,"/auth/superadmin").hasAnyRole("SUPERADMINISTRADOR")
                         .requestMatchers(HttpMethod.GET,"/auth/administrador").hasAnyRole("SUPERADMINISTRADOR","ADMINISTRADOR")

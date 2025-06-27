@@ -7,4 +7,5 @@ public interface EmailService {
     void sendMimeMessageWithEmbeddedFiles(String name, String to, String token);
     void sendHtmlEmail(String name, String to, String token);
     void sendHtmlEmailWithEmbeddedFiles(String name, String to, String token);
+    public void sendPasswordResetEmail(String name, String to, String token);
 }

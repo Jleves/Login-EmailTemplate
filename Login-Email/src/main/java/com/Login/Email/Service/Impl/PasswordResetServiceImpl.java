@@ -6,6 +6,7 @@ import com.Login.Email.Model.Auth.PasswordResetToken;
 import com.Login.Email.Repository.Email.PasswordResetTokenRepository;
 import com.Login.Email.Repository.UserRepository;
 import com.Login.Email.Security.PasswordEncoder;
+import com.Login.Email.Service.Email.EmailService;
 import com.Login.Email.Service.PasswordResetService;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.Logger;
@@ -20,7 +21,7 @@ public class PasswordResetServiceImpl implements PasswordResetService {
 
     private final UserRepository userRepository;
     private final PasswordResetTokenRepository tokenRepository;
-    private final EmailServiceImple emailService;
+    private final EmailService emailService;
     private final PasswordEncoder passwordEncoder;
     private static final Logger logger = Logger.getLogger(PasswordResetServiceImpl.class);
 
